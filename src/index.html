@@ -6,7 +6,17 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>hello</h1>
+  
+  <div class="user-container">
+    대화명 : <input type="text" name="" class="user-name">
+  </div>
+  <div class="chat-container">
+    <ul class="chatting-list"></ul>
+  </div>
+  <div class="input-container">
+    <input type="text" name="" class="chatting-input">
+    <button class="send-button">전송</button>
+  </div>
   <!-- 라이브러리 받지 않고 cjn에서 스크립트 가져와서 사용도 가능함 -->
   <script src="/socket.io/socket.io.js"></script> 
   <script src="/js/chat.js"></script>
