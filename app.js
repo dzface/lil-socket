@@ -22,6 +22,6 @@ io.on("connection", (socket)=>{
   console.log("연결 확인");
   socket.on("chatroom1", (data)=>{
     console.log(data);
-    io.emit("chatroom1", `from server :응답전달 ${data}`); 
+    io.emit("chatroom1", data); 
   })
 });

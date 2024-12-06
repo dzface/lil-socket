@@ -21,12 +21,13 @@ function onClickSendButton(){
   socket.emit("chatroom1", responseDate); 
 }
 
-console.log();
-
-
-
 socket.on("chatroom1", (data)=>{
-  console.log(`데이터 받음 : ${data}`);
+  //console.log(typeof(data));
+  console.log(data);
+  const li = document.createElement("li");
+  li.className = "chat-message";
+  li.innerText = `${data.name}:${data.message}`;
+  chattingList.appendChild(li);
 })
 
 
