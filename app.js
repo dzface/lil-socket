@@ -10,6 +10,7 @@ const http = require("http");
 const server = http.createServer(app);
 
 const socketIO = require("socket.io");
+const moment = require("moment");
 
 const io = socketIO(server); // 9. chat.js에서 프론트 socket 코드 작성
 
@@ -22,6 +23,11 @@ io.on("connection", (socket)=>{
   console.log("연결 확인");
   socket.on("chatroom1", (data)=>{
     console.log(data);
-    io.emit("chatroom1", data); 
+    const {name, message} = data;
+    io.emit("chatroom1", {
+      name,
+      message,
+      time: moment(new Date()).format("h:ss A")
+    }); 
   })
 });

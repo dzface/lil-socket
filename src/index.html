@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   
   <div class="user-container">
-    대화명 : <input type="text" name="" class="user-name"/>
+    <label for="user-name">대화명</label>
+    <input type="text" name="" id="user-name"/>
   </div>
   <div class="chat-container">
     <ul class="chatting-list"></ul>
   </div>
   <div class="input-container">
-    <input type="text" name="" class="chatting-input">
+    <span>
+      <input type="text" name="" class="chatting-input">
     <button class="send-button">전송</button>
+    </span>
   </div>
   <!-- 라이브러리 받지 않고 cjn에서 스크립트 가져와서 사용도 가능함 -->
   <script src="/socket.io/socket.io.js"></script> 
